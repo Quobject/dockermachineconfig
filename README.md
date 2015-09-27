@@ -45,7 +45,7 @@ With promise:
 
 With callback:
 ```js
-    dockermachine.config(config.DockerMachineName, function(err, data) {
+    dockermachine.config('machine-name', function(err, data) {
       console.log('data =', data);
     });
 
