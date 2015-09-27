@@ -26,7 +26,7 @@ var dockermachine = require('dockermachineconfig');
 
 With promise:
 ```js
-    dockermachine.config('machine-name').then( function (data) {
+    dockermachine.config('machine.1.ap-southeast-2.1.0.0.4a').then( function (data) {
       console.log('data =', data);
     });
 
@@ -45,7 +45,7 @@ With promise:
 
 With callback:
 ```js
-    dockermachine.config('machine-name', function(err, data) {
+    dockermachine.config('machine.1.ap-southeast-2.1.0.0.4a', function(err, data) {
       console.log('data =', data);
     });
 
