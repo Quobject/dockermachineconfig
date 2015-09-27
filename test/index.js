@@ -1,8 +1,8 @@
 ﻿/*global describe, it, before */
 var Docker = require('../lib/index.js');
 var assert = require('chai').assert;
-var dockermachine = new require('../lib/index.js')();
-
+//var dockermachine = new require('../lib/index.js')();
+var dockermachine = require('../lib/index.js');
 var config = require('../my_config.json');
 
 describe('dockermachine', function () {

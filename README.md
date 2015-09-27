@@ -18,7 +18,7 @@ The docker-machine command line tool must be installed and accessible in the pat
 Then:
 
 ```js
-var DockerMachine = require('dockermachineconfig');
+var dockermachine = require('dockermachineconfig');
 ```
 
 
