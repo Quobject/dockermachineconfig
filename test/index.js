@@ -4,6 +4,7 @@ var assert = require('chai').assert;
 //var dockermachine = new require('../lib/index.js')();
 var dockermachine = require('../lib/index.js');
 var config = require('../my_config.json');
+var debug = require('debug')('dockermachineconfig test');
 
 describe('dockermachine', function () {
   it('should return promise', function (done) {
@@ -24,5 +25,17 @@ describe('dockermachine', function () {
       done();
     });
   });
+
+  it('scp should return promise', function (done) {
+    var params = config.DockerMachineName + ':/home/ubuntu/.bashrc .';
+    debug('params: ', params);
+    dockermachine.scp(params).then(
+      function (output) {
+        console.log('output =', output);
+        assert.isObject(output, 'output is object');        
+        done();
+      });
+  });
+
 });
 
