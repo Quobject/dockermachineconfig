@@ -1,6 +1,6 @@
 {
   "name": "dockermachineconfig",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A node.js wrapper for the `docker-machine config` command",
   "main": "lib/index.js",
   "scripts": {

@@ -37,5 +37,14 @@ describe('dockermachine', function () {
       });
   });
 
+  it('inspect should return promise', function (done) {
+    dockermachine.inspect(config.DockerMachineName).then(
+      function (output) {
+        console.log('output =', output);
+        assert.isObject(output, 'output is object');
+        done();
+      });
+  });
+
 });
 
